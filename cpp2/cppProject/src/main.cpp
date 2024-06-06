@@ -18,14 +18,11 @@ int main()
     newHu2 = *(newHu);
 
     int a = 0;
-print:
     cout << newHu2.getAge() << endl;
     // cout居然会自动打印char数组了 :/
     cout << newHu2.getName() << endl;
 
     a++;
-    if (a == 1)
-        goto print;
 
     delete newCiv;
     delete newHu;
