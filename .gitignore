@@ -1,0 +1,11 @@
+ccpp2/cppProject2/lib
+cpp2/cppProject2/include
+
+cpp2/cppProject/lib
+cpp2/cppProject/include
+
+ccpp2/cppProject2/output
+cpp2/cppProject/output
+cpp2/cppPorject2/lib/libglad.a
+cpp2/cppPorject2/lib/libglfw3.a
+cpp2/cppPorject2/lib/libglfw3dll.a
