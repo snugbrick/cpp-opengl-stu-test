@@ -25,6 +25,7 @@ INCLUDE	:= include
 
 # define lib directory
 LIB		:= lib
+Libraries := -lglad -lglfw3dll
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
@@ -74,7 +75,7 @@ $(OUTPUT):
 	$(MD) $(OUTPUT)
 
 $(MAIN): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS) $(Libraries)
 
 # include all .d files
 -include $(DEPS)
