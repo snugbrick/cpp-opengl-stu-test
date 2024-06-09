@@ -14,7 +14,6 @@ GLuint  loadShaderFromFile(const std::string& filename, GLenum shaderType) {
     glShaderSource(shader, 1, &shaderSourceCStr, NULL);
     glCompileShader(shader);
 
-    // 检查着色器是否编译成功
     GLint success;
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
     if (!success) {
@@ -26,7 +25,6 @@ GLuint  loadShaderFromFile(const std::string& filename, GLenum shaderType) {
     return shader;
 }
 
-// 从文件中读取着色器代码
 std::string readShaderFromFile(const std::string& filename) {
     std::ifstream file(filename);
     if (!file.is_open()) {
