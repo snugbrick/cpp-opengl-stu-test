@@ -1,0 +1,3 @@
+[submodule "cpp2/cppProject/assimp"]
+	path = cpp2/cppProject/assimp
+	url = git@github.com:assimp/assimp.git
