@@ -79,7 +79,7 @@ int main()
         return -1;
     }
     glfwMakeContextCurrent(window);
-    // glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -90,7 +90,7 @@ int main()
     unsigned int VAO;
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
-
+    // 118784089 107729631
     unsigned int buffer;
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
@@ -109,10 +109,11 @@ int main()
         "layout(location = 0) out vec4 color;\n"
         "void main()\n"
         "{ color=vec4(1.0,0.0,0.0,1.0); }\n";
+    
     unsigned int shader = createShader(vertexShader, fragmentShader);
     glUseProgram(shader);
 
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);  // 黑色背景
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // 黑色背景
 
     while (!glfwWindowShouldClose(window))
     {
@@ -120,7 +121,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shader);
-        //glBindVertexArray(VAO);
+        // glBindVertexArray(VAO);
 
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
